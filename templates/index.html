@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Predictor</title>
+</head>
+<body>
+    <h1>Performance Index Predictor</h1>
+    <form method="POST">
+        <label>Hours Studied:</label><br>
+        <input type="number" step="0.1" name="hours" required><br>
+
+        <label>Previous Scores:</label><br>
+        <input type="number" step="0.1" name="scores" required><br>
+
+        <label>Extracurricular Activities (Yes/No):</label><br>
+        <select name="activities">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+
+        <label>Sleep Hours:</label><br>
+        <input type="number" step="0.1" name="sleep" required><br>
+
+        <label>Sample Question Papers Practiced:</label><br>
+        <input type="number" step="1" name="papers" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h2>Predicted Performance Index: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
